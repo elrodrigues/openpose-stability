@@ -1,4 +1,9 @@
-# Real-time 2D Multi-Person Pose Estimation on CPU: Lightweight OpenPose
+# Lightweight OpenPose with Basic Stability Detection
+The repository builds on [Daniil Osokin's Lightweight OpenPose in PyTorch](https://github.com/Daniil-Osokin/lightweight-human-pose-estimation.pytorch) with basic stability analysis. This is tested for CPU only, although GPU and OpenVINO should work as well. Please refer to repo documentation to set up - requirements.txt here has been updated to fix dependency issues.
+
+Link to download training checkpoint (thanks to Daniil Osokin): https://download.01.org/opencv/openvino_training_extensions/models/human_pose_estimation/checkpoint_iter_370000.pth
+
+## Real-time 2D Multi-Person Pose Estimation on CPU: Lightweight OpenPose
 
 This repository contains training code for the paper [Real-time 2D Multi-Person Pose Estimation on CPU: Lightweight OpenPose](https://arxiv.org/pdf/1811.12004.pdf). This work heavily optimizes the [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) approach to reach real-time inference on CPU with negliable accuracy drop. It detects a skeleton (which consists of keypoints and connections between them) to identify human poses for every person inside the image. The pose may contain up to 18 keypoints: ears, eyes, nose, neck, shoulders, elbows, wrists, hips, knees, and ankles. On COCO 2017 Keypoint Detection validation set this code achives 40% AP for the single scale inference (no flip or any post-processing done). The result can be reproduced using this repository. *This repo significantly overlaps with https://github.com/opencv/openvino_training_extensions, however contains just the necessary code for human pose estimation.*
 
