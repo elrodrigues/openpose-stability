@@ -3,6 +3,17 @@ The repository builds on [Daniil Osokin's Lightweight OpenPose in PyTorch](https
 
 Link to download training checkpoint (thanks to Daniil Osokin): https://download.01.org/opencv/openvino_training_extensions/models/human_pose_estimation/checkpoint_iter_370000.pth
 
+If this helps your research, please cite [Daniil's paper](https://arxiv.org/pdf/1811.12004.pdf):
+
+```
+@inproceedings{osokin2018lightweight_openpose,
+    author={Osokin, Daniil},
+    title={Real-time 2D Multi-Person Pose Estimation on CPU: Lightweight OpenPose},
+    booktitle = {arXiv preprint arXiv:1811.12004},
+    year = {2018}
+}
+```
+
 ## Real-time 2D Multi-Person Pose Estimation on CPU: Lightweight OpenPose
 
 This repository contains training code for the paper [Real-time 2D Multi-Person Pose Estimation on CPU: Lightweight OpenPose](https://arxiv.org/pdf/1811.12004.pdf). This work heavily optimizes the [OpenPose](https://github.com/CMU-Perceptual-Computing-Lab/openpose) approach to reach real-time inference on CPU with negliable accuracy drop. It detects a skeleton (which consists of keypoints and connections between them) to identify human poses for every person inside the image. The pose may contain up to 18 keypoints: ears, eyes, nose, neck, shoulders, elbows, wrists, hips, knees, and ankles. On COCO 2017 Keypoint Detection validation set this code achives 40% AP for the single scale inference (no flip or any post-processing done). The result can be reproduced using this repository. *This repo significantly overlaps with https://github.com/opencv/openvino_training_extensions, however contains just the necessary code for human pose estimation.*
@@ -112,16 +123,3 @@ To run the demo download Intel&reg; OpenVINO&trade; Toolkit [https://software.in
 
 We provide python demo just for the quick results preview. Please, consider c++ demo for the best performance. To run the python demo from a webcam:
 * `python demo.py --checkpoint-path <path_to>/checkpoint_iter_370000.pth --video 0`
-
-## Citation:
-
-If this helps your research, please cite the paper:
-
-```
-@inproceedings{osokin2018lightweight_openpose,
-    author={Osokin, Daniil},
-    title={Real-time 2D Multi-Person Pose Estimation on CPU: Lightweight OpenPose},
-    booktitle = {arXiv preprint arXiv:1811.12004},
-    year = {2018}
-}
-```
