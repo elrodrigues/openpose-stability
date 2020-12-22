@@ -1,5 +1,5 @@
 # Lightweight OpenPose with Basic Stability Detection
-The repository builds on [Daniil Osokin's Lightweight OpenPose in PyTorch](https://github.com/Daniil-Osokin/lightweight-human-pose-estimation.pytorch) with basic stability analysis. This is tested for CPU only, although GPU and OpenVINO should work as well. Please refer to repo documentation to set up - requirements.txt here has been updated to fix dependency issues.
+The repository builds on [Daniil Osokin's Lightweight OpenPose in PyTorch](https://github.com/Daniil-Osokin/lightweight-human-pose-estimation.pytorch) with basic stability analysis. This is tested for CPU only, although GPU and OpenVINO should work as well. Please refer to repo documentation to set up - requirements.txt here has been updated to fix dependency issues. I am exploring ways to wrap dependencies in a [Vagrant](https://www.vagrantup.com/) container.
 
 Link to download training checkpoint (thanks to Daniil Osokin): https://download.01.org/opencv/openvino_training_extensions/models/human_pose_estimation/checkpoint_iter_370000.pth
 
