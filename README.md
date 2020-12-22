@@ -13,7 +13,6 @@ If this helps your research, please cite [Daniil's paper](https://arxiv.org/pdf/
     year = {2018}
 }
 ```
-(test commit)
 
 ## Real-time 2D Multi-Person Pose Estimation on CPU: Lightweight OpenPose
 
